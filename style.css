@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&family=Roboto:ital@0;1&display=swap');
+@font-face {
+    font-family: EB Garamond;
+    src: url("assets/fonts/EB_Garamond");
+    font-weight: 400;
+}
+@font-face {
+    font-family: EB Garamond;
+    src: url("assets/fonts/EB_Garamond");
+    font-weight: 500;
+}
+@font-face {
+    font-family: Lora;
+    src: url("assets/fonts/Lora");
+    font-weight: 400;
+}
+@font-face {
+    font-family: Roboto;
+    src: url("assets/fonts/Roboto");
+    font-weight: 400;
+}
+
+*{box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: EB Garamond, serif;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+
+}
+
+.header{ min-height: 100%; }
+
+
+
+.logo_name{
+    margin-top: 30px;
+    width: auto;
+    height: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.head-line{
+    margin-bottom: 46px;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #6C757D;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    transition: 0.5s;
+    padding-inline-start: 0;
+    border-top: 1px solid #000000;
+    border-bottom: 3px double #000000;
+}
+
+.nav-link{
+    position: relative;
+    padding: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 50px;
+    letter-spacing: -0.015em;
+    color: #3D3D3E;
+    text-transform: uppercase;
+    /max-width: 41px;
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -2px;
+    width: calc(100% - 24px);
+    height: 1px;
+    opacity: 0;
+    transition: 0.5s;
+    background-color: darkgoldenrod;
+
+}
+.nav-link:hover::after{
+    opacity: 1;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slidein {
+    from{
+        width: 0;
+    }
+    to{
+        width: calc(100% - 24px);
+    }
+}
+
+.space-btw-lines{
+    margin-bottom: 1px;
+}
+.main {
+    /min-height: 100%;
+    flex: 1 1 auto;
+
+}
+
+.main-container{
+    margin-top: 30px;
+    max-width: 860px;
+    align-self: center;
+    margin-bottom:auto ;
+
+}
+.section-intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+
+}
+.intro-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 65px 0 0;
+
+
+}
+
+.header-content{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 57px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #212529;
+    margin: 0;
+    text-transform: capitalize;
+}
+.p-intro{
+
+}
+.p-content{
+    text-align: justify;
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #3D3D3E;
+    margin: 22px 0 0 0 ;
+
+}
+.intro-right{
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+
+}
+.avatar{
+    max-width: 100%;
+    object-fit: cover;
+    /border-radius: 28%;
+    transition: 3s;
+}
+.section-introduction{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+}
+.introduction-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.littera-G{
+    margin: 11px 20px  3px  0;
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #212529;
+    align-self: center;
+}
+.top-text{
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #212529;
+    margin: auto;
+}
+.introduction-bottom{
+margin: 3px 0 0 0;
+}
+.text-bottom{
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #212529;
+    margin: auto;
+}
+.section-skills{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 30px 0;
+    border-bottom: 4px double #8B8B8B;
+    /border-top: 4px double #8B8B8B;
+}
+
+.title-list-skills-content{
+    font-family: 'EB Garamond', sans-serif ;
+    margin: 0px 0 0 0 ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: left;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    color: #212529;
+
+}
+.list-skills-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px 0 20px 0 ;
+
+}
+.first-column{
+margin: 0 23px 0 5px;
+}
+.second-column{
+    margin: 0 23px 0 0;
+    /border-left: 1px solid #C3C3C3;
+    padding-left: 23px;
+
+}
+.third-column{
+    margin: 0 5px 0 0px;
+    /border-left: 1px solid #C3C3C3;
+    padding-left: 23px;
+}
+.column-element1{
+    margin: 0 0 32px 0;
+}
+.column-element2{
+    margin: 0 0 32px 0;
+}
+.column-element3{
+    margin: 0;
+}
+
+.skill-title{
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #454A4E;
+    background: #F9F6F6;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 0 18px 0;
+    padding: 6px 0;
+}
+.skill-description{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    text-transform: lowercase;
+    color: #727578;
+    padding: 0 0 0 12px;
+    border-left: 1px solid;
+
+}
+.footer {
+    background: black;
+    border: #6C757D;
+    display: flex;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+    font-family: EB Garamond, serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #ffffff;
+    align-self: auto;
+}
